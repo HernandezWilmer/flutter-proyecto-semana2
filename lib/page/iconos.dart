@@ -5,8 +5,8 @@ const estiloDeEtiqueta = TextStyle(
   color: Color(0xFF8D8E98),
 );
 
-class Iconos extends StatelessWidget {
-  const Iconos({@required this.icono, @required this.etiqueta});
+class IconosContenido extends StatelessWidget {
+  const IconosContenido({@required this.icono, @required this.etiqueta});
 
   final IconData icono;
   final String etiqueta;
