@@ -1,4 +1,4 @@
-import 'dart:math';
+//import 'dart:math';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,72 +21,13 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  //Hola enanita.
   Widget _body() {
     return Column(
       children: [
         Expanded(
-          child: Container(
-            margin: EdgeInsets.all(18.0),
-            decoration: BoxDecoration(
-              color: Color(0xFF1D1E20),
-              borderRadius: BorderRadius.circular(8, 0),
-            ),
-          ),
+          child: Row(),
         ),
       ],
     );
   }
-
-/*
-  void _calcularOperacion() {
-    var arreglo = operaciones.split(" ");
-    double resultado = 0;
-    double primerTermino = 0;
-    double segundoTermino = 0;
-    String operador = arreglo[1].trim();
-
-    if (arreglo[1].trim() != "" && operador != "" && arreglo[2].trim() == "") {
-      primerTermino = double.parse(arreglo[0].trim());
-      if (arreglo[1].trim() != "" && operador == "√") {
-        resultado = sqrt(primerTermino);
-        operador = "²√";
-        setState(() {
-          listaResultados.add(Text("$operador $primerTermino = $resultado\n"));
-        });
-      } else if (arreglo[1].trim() != "" && operador == "^") {
-        resultado = pow(primerTermino, 2);
-        operador = "²";
-        setState(() {
-          listaResultados.add(Text("$primerTermino $operador = $resultado\n"));
-        });
-      } else if (arreglo[1].trim() != "" && operador == "%") {
-        resultado = primerTermino / 100;
-        setState(() {
-          listaResultados.add(Text("$primerTermino $operador = $resultado\n"));
-        });
-      }
-    } else if (arreglo[1].trim() != "" &&
-        operador != "" &&
-        arreglo[2].trim() != "") {
-      primerTermino = double.parse(arreglo[0].trim());
-      segundoTermino = double.parse(arreglo[2].trim());
-      if (operador == "-") {
-        resultado = primerTermino - segundoTermino;
-      } else if (operador == "+") {
-        resultado = primerTermino + segundoTermino;
-      } else if (operador == "/" && segundoTermino > 0) {
-        resultado = primerTermino / segundoTermino;
-      } else if (operador == "x") {
-        resultado = primerTermino * segundoTermino;
-      } else if (operador == "√") {
-        resultado = sqrt(primerTermino);
-      }
-      setState(() {
-        listaResultados.add(
-            Text("$primerTermino $operador $segundoTermino = $resultado\n"));
-      });
-    }
-  }
-  */
 }
