@@ -7,7 +7,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-const activeCardColor = Color(0xFF1D1E20);
+const colorPorDefecto = Color(0xFF1D1E20);
 
 class _HomePageState extends State<HomePage> {
   String operaciones = "";
@@ -31,15 +31,40 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             children: [
               Expanded(
-                child: new WidgetReusable(colour: activeCardColor),
+                child: new WidgetReusable(
+                  colour: colorPorDefecto,
+                ),
               ),
               Expanded(
-                child: new WidgetReusable(colour: activeCardColor),
+                child: new WidgetReusable(
+                  colour: colorPorDefecto,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: new WidgetReusable(
+            colour: colorPorDefecto,
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: new WidgetReusable(
+                  colour: colorPorDefecto,
+                ),
+              ),
+              Expanded(
+                child: new WidgetReusable(
+                  colour: colorPorDefecto,
+                ),
               ),
             ],
           ),
         ),
       ],
     );
-  }
-}
+  } // Cierre del _body
+} // Cierre de la clase
