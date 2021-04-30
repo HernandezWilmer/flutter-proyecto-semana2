@@ -1,4 +1,3 @@
-//import 'dart:math';
 import 'package:calculadora_imc/page/widget-reusable.dart';
 import 'package:flutter/material.dart';
 
