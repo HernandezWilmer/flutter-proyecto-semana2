@@ -1,10 +1,13 @@
 //import 'dart:math';
+import 'package:calculadora_imc/page/widget-reusable.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
+
+const activeCardColor = Color(0xFF1D1E20);
 
 class _HomePageState extends State<HomePage> {
   String operaciones = "";
@@ -25,7 +28,16 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: [
         Expanded(
-          child: Row(),
+          child: Row(
+            children: [
+              Expanded(
+                child: new WidgetReusable(colour: activeCardColor),
+              ),
+              Expanded(
+                child: new WidgetReusable(colour: activeCardColor),
+              ),
+            ],
+          ),
         ),
       ],
     );
