@@ -25,21 +25,20 @@ class _HomePageState extends State<HomePage> {
   Widget _body() {
     return Column(
       children: [
-        Container(
-          color: Colors.yellow,
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [],
-              ),
-            ],
+        Expanded(
+          child: Container(
+            margin: EdgeInsets.all(18.0),
+            decoration: BoxDecoration(
+              color: Color(0xFF1D1E20),
+              borderRadius: BorderRadius.circular(8, 0),
+            ),
           ),
         ),
       ],
     );
   }
 
+/*
   void _calcularOperacion() {
     var arreglo = operaciones.split(" ");
     double resultado = 0;
@@ -89,4 +88,5 @@ class _HomePageState extends State<HomePage> {
       });
     }
   }
+  */
 }
