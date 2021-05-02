@@ -96,12 +96,44 @@ class _HomePageState extends State<HomePage> {
             children: [
               Expanded(
                 child: new WidgetReusable(
-                  colour: kColorActivo,
+                  colour: Colors.yellow,
+                  widgetHijo: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'PESO',
+                        style: kEstiloDeEtiqueta,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RoundIconButton(
+                            icon: FontAwesomeIcons.minus,
+                            onPressed: () {
+                              setState(() {
+                                //if (peso > 30) weight--;
+                              });
+                            },
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  //weight++;
+                                });
+                              }),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
                 child: new WidgetReusable(
-                  colour: kColorActivo,
+                  colour: Colors.blue,
                 ),
               ),
             ],

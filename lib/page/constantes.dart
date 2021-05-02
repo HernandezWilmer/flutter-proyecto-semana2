@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kAlturaContenedor = 70.0;
+const kAlturaContenedor = 80.0;
 const kColorInactivo = Color(0xFF1D1E20);
 const kColorActivo = Color(0xFF111320);
 
@@ -10,6 +10,6 @@ const kEstiloDeEtiqueta = TextStyle(
 );
 
 const kNumeroEstioDeTexto = TextStyle(
-  fontSize: 45.0,
-  fontWeight: FontWeight.w800,
+  fontSize: 50.0,
+  fontWeight: FontWeight.w900,
 );
