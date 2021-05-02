@@ -79,12 +79,12 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Text(
                       '',
-                      style: kNumeroEstioDeTexto,
+                      style: kNumeroEstiloDeTexto,
                     ),
                     Text(
                       'cm',
-                      style: kNumeroEstioDeTexto,
-                    ),
+                      style: kNumeroEstiloDeTexto,
+                    )
                   ],
                 ),
               ],
