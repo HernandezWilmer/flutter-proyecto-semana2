@@ -21,7 +21,7 @@ class IconosContenido extends StatelessWidget {
         ),
         Text(
           '$etiqueta',
-          style: estiloDeEtiqueta,
+          style: kEstiloDeEtiqueta,
         )
       ],
     );

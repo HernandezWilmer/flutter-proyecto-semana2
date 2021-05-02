@@ -64,7 +64,31 @@ class _HomePageState extends State<HomePage> {
         ),
         Expanded(
           child: new WidgetReusable(
-            colour: kColorActivo,
+            colour: Colors.red, //kColorActivo
+            widgetHijo: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Altura',
+                  style: kEstiloDeEtiqueta,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                    Text(
+                      '',
+                      style: kNumeroEstioDeTexto,
+                    ),
+                    Text(
+                      'cm',
+                      style: kNumeroEstioDeTexto,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
         Expanded(
