@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-const estiloDeEtiqueta = TextStyle(
-  fontSize: 18.0,
-  color: Color(0xFF8D8E98),
-);
+import 'constantes.dart';
 
 class IconosContenido extends StatelessWidget {
   const IconosContenido({@required this.icono, @required this.etiqueta});

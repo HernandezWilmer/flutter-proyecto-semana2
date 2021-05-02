@@ -3,19 +3,17 @@ import 'package:calculadora_imc/page/widget-reusable.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'constantes.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-enum Gender { Masculino, Femenino }
-const colorPorDefecto = Color(0xFF1D1E20);
-const inActiveCardColor = Color(0xFF111320);
+enum Genero { Masculino, Femenino }
 
 class _HomePageState extends State<HomePage> {
-  String operaciones = "";
-  String resultadoOperaciones = "";
-  List<Text> listaResultados = [];
+  Genero generoSeleccionado;
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +33,16 @@ class _HomePageState extends State<HomePage> {
             children: [
               Expanded(
                 child: new WidgetReusable(
+                  presionado: () {
+                    setState(() {
+                      generoSeleccionado = Genero.Masculino;
+                    });
+                  },
                   widgetHijo: IconosContenido(
                     icono: FontAwesomeIcons.mars,
                     etiqueta: "MASCULINO",
                   ),
-                  colour: colorPorDefecto,
+                  colour: _getColorM(generoSeleccionado),
                 ),
               ),
               Expanded(
@@ -48,7 +51,12 @@ class _HomePageState extends State<HomePage> {
                     icono: FontAwesomeIcons.venus,
                     etiqueta: "FEMENINO",
                   ),
-                  colour: colorPorDefecto,
+                  presionado: () {
+                    setState(() {
+                      generoSeleccionado = Genero.Femenino;
+                    });
+                  },
+                  colour: _getColorF(generoSeleccionado),
                 ),
               ),
             ],
@@ -56,7 +64,7 @@ class _HomePageState extends State<HomePage> {
         ),
         Expanded(
           child: new WidgetReusable(
-            colour: colorPorDefecto,
+            colour: kColorActivo,
           ),
         ),
         Expanded(
@@ -64,12 +72,12 @@ class _HomePageState extends State<HomePage> {
             children: [
               Expanded(
                 child: new WidgetReusable(
-                  colour: colorPorDefecto,
+                  colour: kColorActivo,
                 ),
               ),
               Expanded(
                 child: new WidgetReusable(
-                  colour: colorPorDefecto,
+                  colour: kColorActivo,
                 ),
               ),
             ],
@@ -79,3 +87,19 @@ class _HomePageState extends State<HomePage> {
     );
   } // Cierre del _body
 } // Cierre de la clase
+
+Color _getColorM(generoSeleccionado) {
+  if (generoSeleccionado == Genero.Masculino) {
+    return kColorActivo;
+  } else {
+    return kColorInactivo;
+  }
+}
+
+Color _getColorF(generoSeleccionado) {
+  if (generoSeleccionado == Genero.Femenino) {
+    return kColorActivo;
+  } else {
+    return kColorInactivo;
+  }
+}
