@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   widgetHijo: IconosContenido(
                     icono: FontAwesomeIcons.mars,
-                    etiqueta: "MASCULINO",
+                    etiqueta: "Masculino",
                   ),
                   colour: _getColorM(generoSeleccionado),
                 ),
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 child: new WidgetReusable(
                   widgetHijo: IconosContenido(
                     icono: FontAwesomeIcons.venus,
-                    etiqueta: "FEMENINO",
+                    etiqueta: "Femenino",
                   ),
                   presionado: () {
                     setState(() {
@@ -78,15 +78,29 @@ class _HomePageState extends State<HomePage> {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      '',
+                      //estatura.toString(),
+                      '1.80',
                       style: kNumeroEstioDeTexto,
                     ),
                     Text(
                       'cm',
-                      style: kNumeroEstioDeTexto,
+                      style: kEstiloDeEtiqueta,
                     ),
                   ],
                 ),
+                SliderTheme(
+                    data: SliderTheme.of(context).copyWith(),
+                    child: Slider(
+                      //value: altura.toDouble(),
+                      value: 180.0,
+                      min: 120.0,
+                      max: 220.0,
+                      onChanged: (double newValue) {
+                        setState(() {
+//                          altura = newValue.round();
+                        });
+                      },
+                    )),
               ],
             ),
           ),
@@ -111,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                             icon: FontAwesomeIcons.minus,
                             onPressed: () {
                               setState(() {
-                                //if (peso > 30) weight--;
+                                //if (peso > 30) peso--;
                               });
                             },
                           ),
@@ -134,6 +148,43 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 child: new WidgetReusable(
                   colour: Colors.blue,
+                  widgetHijo: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'AGE',
+                        //style: kLabelStyle,
+                      ),
+                      Text(
+                        '',
+                        //age.toString(),
+                        style: kNumeroEstioDeTexto,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  //if (age > 1) age--;
+                                });
+                              }),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          RoundIconButton(
+                            icon: FontAwesomeIcons.plus,
+                            onPressed: () {
+                              setState(() {
+                                //age++;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

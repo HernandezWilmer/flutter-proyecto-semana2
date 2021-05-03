@@ -12,6 +12,9 @@ class MyApp extends StatelessWidget {
       title: "Calculadora IMC",
       theme: ThemeData.dark(),
       home: HomePage(),
+      /* routes: {
+        '/result': (context) => PaginaResultado(),
+      },*/
     );
   }
 }

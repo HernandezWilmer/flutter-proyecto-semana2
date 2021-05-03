@@ -1,14 +1,14 @@
 import 'dart:math';
 
 class CalculaIMC {
-  CalculaIMC({this.altura, this.peso});
+  CalculaIMC({this.estatura, this.peso});
 
-  final int altura;
+  final int estatura;
   final int peso;
   double _imc;
 
   String calculateBMI() {
-    _imc = peso / pow(altura / 100, 2);
+    _imc = peso / pow(estatura / 100, 2);
     return _imc.toStringAsFixed(1);
   }
 
