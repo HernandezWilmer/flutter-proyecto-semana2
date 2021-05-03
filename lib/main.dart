@@ -1,20 +1,21 @@
-import 'package:calculadora_imc/page/home-page.dart';
+import 'package:calculadora_imc/pages/pagina_de_resultados.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/home_page.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(CalculadoraDeIMC());
 }
 
-class MyApp extends StatelessWidget {
+class CalculadoraDeIMC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Calculadora IMC",
       theme: ThemeData.dark(),
       home: HomePage(),
-      /* routes: {
-        '/result': (context) => PaginaResultado(),
-      },*/
+      routes: {
+        PaginaResultados.routeName: (context) => PaginaResultados(),
+      },
     );
   }
 }
